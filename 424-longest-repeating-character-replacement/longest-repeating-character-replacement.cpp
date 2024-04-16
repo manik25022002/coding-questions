@@ -7,8 +7,7 @@ public:
             map[s[r] - 'A']++;
             max_fre =max(max_fre , map[s[r] - 'A']);
             while((r-l+1) - max_fre  >k    )/* matlab trim karna padega*/
-            {
-                map[s[l] -'A']--;
+            { map[s[l] -'A']--;
                 max_fre=0;
                 for(int i=0;i<map.size();i++) 
                 max_fre=max(max_fre , map[i]);
