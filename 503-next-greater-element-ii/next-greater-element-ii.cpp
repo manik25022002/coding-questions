@@ -5,7 +5,6 @@ public:
         stack<int> st;
         vector<int> ans(n,-1);
         for (int i=2*n-1; i>=0; i--) {
-        //   if(i>n)  i=i%n;
             while (!st.empty() && st.top() <= nums[i%n]) {
                 st.pop();
             }
@@ -13,7 +12,6 @@ public:
                 if (! st.empty()) {
                     ans[i] = st.top();
                 }
-               
             }
             st.push(nums[i%n]);
         }
