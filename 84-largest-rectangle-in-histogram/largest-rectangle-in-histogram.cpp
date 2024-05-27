@@ -12,8 +12,7 @@ public:
                 left[i] = 0;
             else
                 left[i] = st.top() + 1;
-            st.push(i);
-        }
+            st.push(i);  }
         while(!st.empty()) st.pop();
         // right half
         for (int i = n-1; i>=0; i--) {
