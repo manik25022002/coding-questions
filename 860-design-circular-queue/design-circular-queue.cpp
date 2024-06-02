@@ -56,7 +56,6 @@ public:
     }
 
     int Rear() {
-        // if ((front == 0 && rear == size - 1) || (rear == (front - 1) % size))
         if( front == -1 &&  rear == -1)
             return -1;
         else {
