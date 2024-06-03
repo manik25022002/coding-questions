@@ -12,20 +12,17 @@ public:
     }
 
     bool enQueue(int value) {
-        if ((front == 0 && rear == size - 1) || (rear == (front - 1) % size))
+        if ((front == 0 && rear == size-1) || (rear == (front-1) % size))
             return false;
         else if (front == -1) {
-
             rear = front = 0;
             arr[rear] = value;
             return true;
-
         } else if (front != 0 && rear == size - 1) {
             rear = 0;
             arr[rear] = value;
             return true;
         } else {
-
             rear++;
               arr[rear] = value;
             return true;
