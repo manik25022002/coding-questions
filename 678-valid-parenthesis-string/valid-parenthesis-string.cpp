@@ -16,8 +16,8 @@ public:
                 min=min-1;
                 max=max+1;
             }
-            if(min<0)min=0;
-            if(max<0)return false;
+              if(max<0)return false;
+            if(min<0)min=0; 
         }
      if(min==0)return true;
      else return false;
