@@ -7,16 +7,16 @@ public:
         for(int i=0;i<k;i++){
             left_sum+=cardPoints[i];
         }
-        int maxsum=left_sum;
+        int max_sum=left_sum;
         int r=n-1;
         int right_sum=0;
         for(int i=k-1;i>=0;i--){
             left_sum=left_sum-cardPoints[i];
             right_sum=right_sum+cardPoints[r];
             r=r-1;
- maxsum=max(maxsum,(left_sum+right_sum));
+             max_sum=max(max_sum,(left_sum+right_sum));
         }
        
-        return maxsum;
+        return max_sum;
     }
 };
