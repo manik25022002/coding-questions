@@ -9,7 +9,7 @@ bool solve(int x){
     }
 }
     bool isPowerOfFour(int n) {
-        if(n<1) return false;
+        if(n<4 && n!=1) return false;
         int ans= solve(n);
         return ans;
     }
