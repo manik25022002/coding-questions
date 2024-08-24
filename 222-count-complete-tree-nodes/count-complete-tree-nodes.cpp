@@ -33,8 +33,6 @@ public:
         int lheight=lh(root);
         int rheight=rh(root);
         if(lheight==rheight)return (1<<lheight) -1;
-        else{
-            return 1+countNodes(root->left) +countNodes(root->right);
-        }
+        else return 1+countNodes(root->left) +countNodes(root->right);
     }
 };
