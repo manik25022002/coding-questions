@@ -11,15 +11,21 @@
  */
 class Solution {
 public:
-void solve(TreeNode* root,vector<int>&ans){
-if(root == nullptr)return;
-solve(root->left,ans);
-ans.push_back(root->val);
-solve(root->right,ans);
+void inorder(TreeNode* root,vector<int>&ans){
+    if(root==nullptr)return ;
+    inorder(root->left,ans);
+    ans.push_back(root->val);
+    inorder(root->right,ans);
 }
     vector<int> inorderTraversal(TreeNode* root) {
+        
         vector<int>ans;
-        solve(root,ans);
+        inorder(root,ans);
         return ans;
+        
     }
 };
+
+// simple method using recursion only very easy
+// make function then call
+// root left right then
