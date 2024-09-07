@@ -14,13 +14,9 @@ class Solution {
 public:
 void getpath(TreeNode* root,string path){
     if(root == nullptr)return;
-      if(!path.empty()){
-  path=path+"->";
-    }
+      if(!path.empty()) path=path+"->";
     path = path + to_string(root->val);
-    if(root->left == nullptr && root->right==nullptr){
-        ans.push_back(path);
-    }
+    if(root->left == nullptr && root->right==nullptr) ans.push_back(path);
     else{
     getpath(root->left,path);
     getpath(root->right,path);
