@@ -4,9 +4,8 @@ public:
         int ans=-1;
         int s=0;
         int e=nums.size()-1;
-        int mid;
         while(s<=e){
-            mid=s+(e-s)/2;
+           int mid=s+(e-s)/2;
             if(nums[mid]==target){
                 ans=mid;
                 break;
