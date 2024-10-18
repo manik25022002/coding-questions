@@ -6,7 +6,7 @@ int first_o(vector<int>& nums, int target) {
         int e = nums.size() - 1;
         while (s <= e) {
            int mid = s + (e - s) / 2;
-            if (nums[mid] == target) {
+            if (nums[mid] == target ) {
                 first = mid;
                 e = mid - 1;
             } 
