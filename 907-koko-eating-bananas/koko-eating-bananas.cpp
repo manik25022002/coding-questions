@@ -21,11 +21,11 @@ public:
         while (s <= e) {
             int mid = s + (e - s) / 2;
             long long val = findtotalhours(piles, mid);
-            if (val > h) {
-                s=mid+1;
-                // e = mid - 1;
-            } else {e = mid - 1;
-                // s = mid + 1;
+            if (val <= h) {
+         
+                e = mid - 1;
+            } else{
+                s = mid + 1;
             }
         
         }
